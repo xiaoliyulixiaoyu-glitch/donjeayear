@@ -1,0 +1,49 @@
+{
+  "checkedOn": "2026-10-23",
+  "notes": [
+    "观看日期、观看进度、收藏及外卖订单均为剧情示例，不是金道勋真实账号的历史记录。",
+    "YouTube 封面服务器直连超时，使用发布方 MBC PLUS 官网缓存的同一视频封面。",
+    "只保存静态封面，不下载或播放正片。"
+  ],
+  "assets": [
+    {
+      "file": "youtube/last-festival-vertical.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=TwJM7wQwHOw",
+      "page": "https://m.mbcplus.com/web/clip/youtubeView.do?seq=77110",
+      "imageUrl": "https://m.mbcplus.com/upload/vi/TwJM7wQwHOw/mqdefault.jpg",
+      "note": "电视台官网缓存的对应 YouTube 视频封面，非视频文件。"
+    },
+    {
+      "file": "youtube/last-festival-4k.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=UBA91MZrFsw",
+      "page": "https://m.mbcplus.com/web/clip/youtubeView.do?seq=77110",
+      "imageUrl": "https://m.mbcplus.com/upload/vi/UBA91MZrFsw/mqdefault.jpg",
+      "note": "来源页面播放列表中标为 DOHOON 的 4K 直拍，使用同一视频的缓存封面。"
+    },
+    {
+      "file": "youtube/plot-twist.jpg",
+      "videoUrl": "https://www.youtube.com/watch?v=nKGi6X95mgo",
+      "discoveryPage": "https://twsdohoonsmile.tistory.com/1",
+      "imageUrl": "https://m.mbcplus.com/upload/vi/nKGi6X95mgo/mqdefault.jpg",
+      "note": "Show Champion EP.504 2024-02-07，电视台缓存的对应视频封面。"
+    },
+    {
+      "file": "netflix/twenty-five-twenty-one.jpg",
+      "page": "https://www.cjenm.com/en/featured-contents/twenty-five-twenty-one/",
+      "imageUrl": "https://web2-cf-image.cjenm.com/public/share/metamng/programs/Contents-Detail-KV-twenty-five-twenty-one_1647332570290.jpg?v=1739891209",
+      "note": "CJ ENM 官方剧集宣传海报，已缩小保存在本地。"
+    },
+    {
+      "file": "netflix/hospital-playlist.jpg",
+      "page": "https://www.cjenm.com/en/featured-contents/hospital-playlist/",
+      "imageUrl": "https://web2-cf-image.cjenm.com/public/share/metamng/programs/hospitalplaylist-drama-poster-ko-001-06.jpg?v=1739891196",
+      "note": "CJ ENM 官方剧集宣传海报，已缩小保存在本地。"
+    },
+    {
+      "file": "netflix/reply-1988.jpg",
+      "page": "https://www.cjenm.com/en/featured-contents/reply-1988/",
+      "imageUrl": "https://web2-cf-image.cjenm.com/public/share/metamng/programs/reply1988-drama-poster-ko-001-02_1645678705066.jpg?v=1739891182",
+      "note": "CJ ENM 官方剧集宣传海报，已缩小保存在本地。"
+    }
+  ]
+}

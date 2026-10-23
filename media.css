@@ -1,0 +1,73 @@
+.app-screen:is([data-app="youtube"], [data-app="netflix"], [data-app="baemin"]) > .app-content { overflow: hidden; }
+.media-records-shell { display: flex; flex-direction: column; height: 100%; min-height: 0; font-size: 12px; }
+.media-records-scroll { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; scrollbar-width: none; }
+.media-records-scroll::-webkit-scrollbar { display: none; }
+.media-records-shell .story-translation { font-size: 9px; color: #999; line-height: 1.4; margin-bottom: 2px; font-weight: 400; }
+.media-records-shell .story-original { line-height: 1.5; }
+.media-records-shell svg { width: 22px; height: 22px; flex-shrink: 0; }
+.media-section-heading { display: flex; justify-content: space-between; align-items: center; margin: 0; padding: 15px 16px; font-size: 17px; font-weight: 700; }
+.media-section-heading svg { width: 19px; height: 19px; color: #555; }
+.media-bottom-nav { display: flex; justify-content: space-around; flex-shrink: 0; padding: 6px 4px 2px; border-top: 1px solid #eee; background: #fff; }
+.media-bottom-nav button { display: flex; flex: 1; flex-direction: column; align-items: center; gap: 3px; min-height: 44px; padding: 4px 1px; border: 0; color: #929292; background: transparent; font: inherit; font-size: 9px; cursor: pointer; }
+.media-bottom-nav button[aria-current] { color: #141414; font-weight: 650; }
+.media-user-avatar { display: grid; place-items: center; flex: 0 0 40px; width: 40px; height: 40px; border-radius: 50%; background: #d7e1e0; color: #4f6864; font-size: 19px; }
+.youtube-records { background: #fff; }
+.youtube-records-heading { display: flex; align-items: center; gap: 11px; padding: 10px 16px; font-size: 18px; }
+.youtube-record { display: flex; gap: 11px; padding: 10px 14px 14px; }
+.youtube-record-image { position: relative; width: 43%; flex: 0 0 43%; aspect-ratio: 16 / 9; align-self: flex-start; overflow: hidden; border-radius: 8px; background: #e4e4e4; }
+.youtube-record-image img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.youtube-record-image > span { position: absolute; inset: auto 5px 5px auto; display: grid; place-items: center; width: 21px; height: 16px; border-radius: 4px; background: rgb(0 0 0 / 65%); color: #fff; }
+.youtube-record-image svg { width: 12px; height: 12px; }
+.youtube-record-copy { min-width: 0; }
+.youtube-record h3 { margin: 0; font-size: 12px; font-weight: 600; }
+.youtube-record p, .youtube-record small { display: block; margin: 5px 0 0; color: #969696; font-size: 9px; line-height: 1.5; }
+.youtube-record small { margin-top: 2px; font-size: 8px; }
+.media-channel { display: flex; align-items: center; gap: 12px; padding: 15px; }
+.media-channel > span { display: grid; place-items: center; width: 45px; height: 45px; border-radius: 50%; background: #252e46; color: white; text-align: center; font-size: 9px; font-weight: 700; }
+.media-channel p { margin: 5px 0 0; color: #999; font-size: 10px; }
+.netflix-records { background: #121212; }
+.netflix-records-heading { padding: 13px 16px 18px; }
+.netflix-records-heading > span { color: #959595; font-size: 9px; letter-spacing: 1px; }
+.netflix-records-heading h2 { margin: 8px 0 0; font-size: 20px; }
+.netflix-record-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 12px; padding: 0 16px 25px; }
+.netflix-poster { position: relative; width: 100%; aspect-ratio: 660 / 950; border-radius: 6px; overflow: hidden; background: #292929; }
+.netflix-poster img { display: block; width: 100%; height: 100%; object-fit: cover; }
+.netflix-poster b { position: absolute; top: 5px; left: 6px; color: #e50914; font-size: 18px; font-weight: 900; text-shadow: 0 1px 2px #000; }
+.netflix-record h3 { margin: 8px 0 0; font-size: 12px; font-weight: 600; }
+.netflix-record p { margin: 6px 0; color: #999; font-size: 10px; }
+.netflix-records .story-translation { color: #979797; }
+.netflix-progress { height: 3px; margin-top: 10px; border-radius: 2px; overflow: hidden; background: #454545; }
+.netflix-progress span { display: block; height: 100%; background: #e50914; }
+.netflix-records .media-bottom-nav { background: #151515; border-color: #292929; }
+.netflix-records .media-bottom-nav button[aria-current] { color: #fff; }
+.media-empty-record { padding: 28px 20px; }
+.media-empty-record h2 { font-size: 19px; }
+.media-empty-record p { color: #999; }
+.baemin-records { background: #f5f6f7; }
+.baemin-home-banner { padding: 20px 17px 23px; background: #2ac1bc; color: #153f40; }
+.baemin-home-banner > span { font-size: 10px; }
+.baemin-home-banner h2 { margin: 8px 0 0; font-size: 22px; letter-spacing: -0.8px; }
+.baemin-order { margin: 0 12px 12px; padding: 13px 14px 0; border: 1px solid #eceeef; border-radius: 13px; background: white; }
+.baemin-order > header { display: flex; justify-content: space-between; gap: 5px; margin-bottom: 12px; font-size: 9px; color: #a2a2a2; }
+.baemin-order > header > span { color: #269690; }
+.baemin-order-main { display: flex; align-items: flex-start; gap: 11px; }
+.baemin-food-art { display: grid; place-items: center; flex: 0 0 53px; width: 53px; height: 53px; border-radius: 12px; background: #f5efdf; }
+.baemin-food-art svg { width: 46px; height: 46px; }
+.baemin-order h3, .baemin-favorite h3 { margin: 0; font-size: 14px; font-weight: 650; }
+.baemin-order-main > div { flex: 1; min-width: 0; }
+.baemin-order-main p { margin: 7px 0; color: #666; font-size: 11px; }
+.baemin-order-main strong { display: block; padding-bottom: 12px; font-size: 12px; }
+.baemin-order summary { padding: 10px 2px; border-top: 1px solid #f0f0f0; color: #6f7476; font-size: 10px; cursor: pointer; }
+.baemin-order-detail { padding: 2px 0 13px; font-size: 11px; line-height: 1.6; }
+.baemin-order-detail small { display: block; margin-bottom: 5px; color: #aaa; font-size: 9px; }
+.baemin-favorite { display: flex; align-items: center; gap: 12px; margin: 0 12px 12px; padding: 14px; border-radius: 12px; background: #fff; }
+.baemin-heart { margin-left: auto; color: #2ac1bc; }
+.baemin-heart svg { fill: #2ac1bc; width: 18px; height: 18px; }
+.baemin-profile { display: flex; flex-direction: column; align-items: center; padding: 28px 15px; }
+.baemin-profile h2 { margin: 10px 0 5px; font-size: 19px; }
+.baemin-profile p { color: #8c9192; font-size: 11px; }
+.baemin-records .media-bottom-nav button[aria-current] { color: #168f91; }
+@media (max-width: 360px) {
+  .youtube-record { padding-right: 10px; padding-left: 10px; gap: 8px; }
+  .youtube-record h3 { font-size: 11px; }
+}

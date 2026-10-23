@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="480" viewBox="0 0 600 480">
+  <defs>
+    <linearGradient id="paper" x2="1" y2="1"><stop stop-color="#eee5d7"/><stop offset="1" stop-color="#d6c7b6"/></linearGradient>
+    <radialGradient id="bead"><stop stop-color="#fff8e6"/><stop offset=".55" stop-color="#d7c6a7"/><stop offset="1" stop-color="#a18a6a"/></radialGradient>
+    <radialGradient id="blue"><stop stop-color="#d9edf1"/><stop offset=".6" stop-color="#8ba8b2"/><stop offset="1" stop-color="#567b88"/></radialGradient>
+    <radialGradient id="pink"><stop stop-color="#f9e5de"/><stop offset=".6" stop-color="#c5a29c"/><stop offset="1" stop-color="#a77f7b"/></radialGradient>
+    <filter id="shadow"><feDropShadow dx="3" dy="7" stdDeviation="5" flood-color="#67533f" flood-opacity=".22"/></filter>
+    <g id="strand">
+      <circle cy="-83" r="13" fill="url(#bead)"/>
+      <circle cx="32" cy="-77" r="13" fill="url(#bead)"/>
+      <circle cx="59" cy="-59" r="13" fill="url(#bead)"/>
+      <circle cx="77" cy="-32" r="13" fill="url(#bead)"/>
+      <circle cx="83" r="13" fill="url(#bead)"/>
+      <circle cx="77" cy="32" r="13" fill="url(#bead)"/>
+      <circle cx="59" cy="59" r="13" fill="url(#bead)"/>
+      <circle cx="32" cy="77" r="13" fill="url(#bead)"/>
+      <circle cy="83" r="13" fill="url(#bead)"/>
+      <circle cx="-32" cy="77" r="13" fill="url(#bead)"/>
+      <circle cx="-59" cy="59" r="13" fill="url(#bead)"/>
+      <circle cx="-77" cy="32" r="13" fill="url(#bead)"/>
+      <circle cx="-83" r="13" fill="url(#bead)"/>
+      <circle cx="-77" cy="-32" r="13" fill="url(#bead)"/>
+      <circle cx="-59" cy="-59" r="13" fill="url(#bead)"/>
+      <circle cx="-32" cy="-77" r="13" fill="url(#bead)"/>
+    </g>
+  </defs>
+  <path fill="url(#paper)" d="M0 0h600v480H0z"/>
+  <path d="m400 0 200 150v330H100Z" fill="#ffffff" opacity=".12"/>
+  <g filter="url(#shadow)">
+    <g transform="translate(224 213) rotate(-20)"><use href="#strand"/><circle cx="32" cy="-77" r="13" fill="url(#blue)"/><circle cx="59" cy="59" r="13" fill="url(#blue)"/><circle cx="-77" cy="32" r="13" fill="url(#blue)"/></g>
+    <g transform="translate(371 285) rotate(17)"><use href="#strand"/><circle cx="32" cy="-77" r="13" fill="url(#pink)"/><circle cx="59" cy="59" r="13" fill="url(#pink)"/><circle cx="-77" cy="32" r="13" fill="url(#pink)"/></g>
+  </g>
+  <text x="36" y="54" font-family="sans-serif" font-size="14" letter-spacing="4" fill="#6e6559">INSADONG · HANDMADE</text>
+  <text x="36" y="438" font-family="serif" font-size="29" fill="#6e6559">made by us, for us.</text>
+</svg>

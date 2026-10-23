@@ -1,0 +1,217 @@
+/* 桌面小组件：尺寸和圆角可在这里调整。 */
+:root {
+  --widget-size: 158px;
+  --widget-radius: 23px;
+}
+
+.home-screen { overflow-y: auto; scrollbar-width: none; }
+.home-screen::-webkit-scrollbar { display: none; }
+
+.home-widgets {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-bottom: 25px;
+  flex-shrink: 0;
+}
+.widget-slot { display: flex; flex-direction: column; align-items: center; min-width: 0; gap: 7px; }
+.ios-widget {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(100%, var(--widget-size));
+  aspect-ratio: 1;
+  padding: 15px;
+  overflow: hidden;
+  border: 0;
+  border-radius: var(--widget-radius);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  box-shadow: 0 4px 12px rgb(0 0 0 / 10%);
+  -webkit-tap-highlight-color: transparent;
+}
+.ios-widget:active { filter: brightness(0.92); }
+.widget-name { color: white; font-size: 11px; line-height: 1.3; text-shadow: 0 1px 5px rgb(0 0 0 / 80%); }
+.weather-widget { color: white; background: linear-gradient(155deg, #3883c5, #66b7e9); }
+.weather-widget.is-night { background: linear-gradient(150deg, #153356, #31567e); }
+.widget-city { font-size: 15px; line-height: 1.2; font-weight: 500; }
+.widget-temperature { margin-top: 2px; font-size: 45px; line-height: 1.1; font-weight: 300; letter-spacing: -2px; }
+.widget-weather-bottom { margin-top: auto; }
+.weather-symbol { display: block; width: 29px; height: 23px; }
+.widget-weather-description { display: block; margin-top: 2px; font-size: 11px; line-height: 1.3; }
+.widget-temperature-range { display: block; margin-top: 2px; font-size: 10px; line-height: 1.2; white-space: nowrap; }
+.calendar-widget { background: #fff; color: #18181a; }
+.widget-weekday { color: #e54a43; font-size: 12px; font-weight: 600; line-height: 1.2; }
+.widget-calendar-date { font-size: 54px; line-height: 1.08; letter-spacing: -2px; font-weight: 300; margin-top: 1px; }
+.widget-calendar-summary { margin-top: auto; font-size: 11px; line-height: 1.45; color: #8b8b90; }
+.widget-calendar-event { padding-left: 7px; border-left: 3px solid #a48acb; color: #555; }
+.widget-calendar-event strong { display: block; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: 11px; font-weight: 500; }
+.widget-calendar-event small { display: block; margin-top: 1px; font-size: 10px; color: #8b8b90; }
+
+/* 点开天气后的详情画面。 */
+.app-screen[data-app="weather"] { background: linear-gradient(155deg, #3883c5, #66b7e9); color: white; --app-accent: white; }
+.app-screen[data-app="weather"].is-night { background: linear-gradient(150deg, #153356, #31567e); }
+.phone-screen[data-app="weather"] .status-bar,
+.phone-screen[data-app="weather"] .home-indicator { color: white; }
+.weather-detail { padding: 28px 22px; text-align: center; }
+.weather-detail h2 { margin: 0 0 8px; font-size: 30px; font-weight: 400; }
+.weather-detail .weather-detail-temperature { margin: 0; font-size: 90px; font-weight: 200; line-height: 1.2; letter-spacing: -4px; }
+.weather-detail .weather-symbol { width: 66px; height: 50px; margin: 15px auto 10px; }
+.weather-detail-condition { margin: 0 0 8px; font-size: 18px; }
+.weather-detail-range { margin: 0; font-size: 14px; opacity: 0.85; }
+.weather-detail-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 35px; text-align: left; }
+.weather-detail-stat { padding: 17px; background: rgb(255 255 255 / 12%); border-radius: 18px; }
+.weather-detail-stat small { display: block; font-size: 11px; opacity: 0.7; }
+.weather-detail-stat strong { display: block; margin-top: 6px; font-size: 28px; font-weight: 400; }
+
+/* 点开日历后的月历画面。 */
+.app-screen[data-app="calendar"] { background: #fff; --app-accent: #e24b44; }
+.calendar-page { padding: 12px 17px 24px; }
+.calendar-month-toolbar { display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 20px; }
+.calendar-month-toolbar h2 { margin: 0; font-size: 24px; letter-spacing: -0.8px; }
+.calendar-month-nav { display: flex; align-items: center; gap: 4px; }
+.calendar-month-nav button { border: 0; background: transparent; color: #e24b44; font-size: 27px; width: 34px; height: 40px; cursor: pointer; }
+.calendar-weekdays, .calendar-month-grid { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); }
+.calendar-weekdays { text-align: center; font-size: 11px; color: #777; margin-bottom: 8px; }
+.calendar-weekdays span:first-child { color: #df4d49; }
+.calendar-weekdays span:last-child { color: #7b8bb8; }
+.calendar-month-grid { row-gap: 5px; }
+.calendar-day { display: grid; place-items: center; min-width: 0; height: 39px; padding: 0; border: 0; background: transparent; color: #252529; font: inherit; font-size: 16px; cursor: pointer; }
+.calendar-day span { display: grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; }
+.calendar-day.is-today span { background: #ed5149; color: white; }
+.calendar-day.is-selected:not(.is-today) span { background: #303033; color: white; }
+.calendar-day.has-events { position: relative; }
+.calendar-day.has-events::after { content: ""; position: absolute; bottom: 0; width: 3px; height: 3px; border-radius: 50%; background: #9f8abf; }
+.calendar-day:focus-visible { outline-offset: -2px !important; }
+.calendar-events { margin-top: 24px; padding-top: 18px; border-top: 1px solid #eee; }
+.calendar-events h3 { margin: 0 0 18px; font-size: 13px; font-weight: 500; color: #999; }
+.calendar-no-events { margin: 30px 0; text-align: center; color: #aaa; font-size: 15px; }
+.calendar-event-row { display: flex; gap: 12px; margin-bottom: 16px; padding: 3px 0 3px 12px; border-left: 3px solid #a48acb; }
+.calendar-event-row time { min-width: 44px; font-size: 12px; color: #999; }
+.calendar-event-row p { margin: 0; font-size: 14px; overflow-wrap: anywhere; }
+.calendar-today { display: block; margin: 25px auto 0; padding: 9px 17px; border: 0; border-radius: 20px; background: #fff1f0; color: #d94740; font: inherit; font-size: 13px; cursor: pointer; }
+
+/* 纪念日：粉色日期标记、倒计时和独立编辑页。 */
+.widget-anniversary { border-left-color: #ed8296; max-width: 100%; }
+.calendar-day.has-anniversary::after { background: #e7728c; width: 4px; height: 4px; }
+.calendar-day.is-saturday { color: #8d8e99; }
+.calendar-day.is-sunday, .calendar-day.is-holiday { color: #df514a; }
+.calendar-day.is-holiday:not(.has-anniversary)::after { background: #df7169; }
+.calendar-holiday-caption { display: flex; align-items: center; gap: 5px; margin: 15px 0 0; color: #969096; font-size: 10px; }
+.calendar-holiday-caption i { width: 5px; height: 5px; background: #df7169; border-radius: 50%; }
+.calendar-holiday-row { display: flex; align-items: flex-start; gap: 12px; padding: 7px 0 7px 12px; margin-bottom: 13px; border-left: 3px solid #df7169; }
+.holiday-all-day { padding-top: 3px; min-width: 30px; font-size: 11px; color: #999; }
+.calendar-holiday-row > div { min-width: 0; }
+.calendar-holiday-row strong { display: block; color: #333035; font-size: 14px; font-weight: 500; overflow-wrap: anywhere; }
+.calendar-holiday-row small { display: block; margin-top: 4px; color: #999; font-size: 10px; }
+.widget-holiday { border-left-color: #df7169; }
+.calendar-translation { display: block; margin-bottom: 2px; color: #796f76; font-size: 10px; font-weight: 400; line-height: 1.55; overflow-wrap: anywhere; white-space: pre-wrap; }
+.anniversary-note { display: block; margin-top: 10px; color: #625b60; font-size: 12px; line-height: 1.65; overflow-wrap: anywhere; }
+.anniversary-note .calendar-translation { margin-bottom: 1px; }
+.widget-anniversary .calendar-translation { margin-bottom: 0; font-size: 9px; line-height: 1.25; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.calendar-widget.has-translation .widget-calendar-date { font-size: 49px; }
+.calendar-bilingual-line { display: block; }
+.calendar-bilingual-line + .calendar-bilingual-line { margin-top: 8px; }
+.calendar-bilingual-line.is-blank { min-height: 0.7em; }
+.calendar-original { display: block; white-space: pre-wrap; overflow-wrap: anywhere; }
+.anniversary-detail { padding: 29px 22px 32px; color: #252529; }
+.anniversary-detail-heading { padding-bottom: 25px; }
+.anniversary-detail h2 { margin: 0 0 14px; font-size: 27px; font-weight: 600; letter-spacing: -0.7px; line-height: 1.4; }
+.anniversary-detail h2 .calendar-translation { margin-bottom: 5px; font-size: 11px; letter-spacing: 0; }
+.anniversary-detail-countdown { display: inline-block; padding: 5px 10px; border-radius: 7px; background: #fff1f3; color: #b95d76; font-size: 12px; font-weight: 500; }
+.anniversary-detail-facts { border-top: 1px solid #efedf0; border-bottom: 1px solid #efedf0; }
+.anniversary-detail-facts > div { padding: 16px 0; }
+.anniversary-detail-facts > div + div { border-top: 1px solid #f4f2f4; }
+.anniversary-detail-facts > div > span, .anniversary-detail-note h3 { color: #8e878d; font-size: 11px; font-weight: 400; }
+.anniversary-detail-facts p { margin: 6px 0 0; font-size: 14px; line-height: 1.6; }
+.anniversary-detail-note { margin-top: 25px; }
+.anniversary-detail-note h3 { margin: 0 0 13px; }
+.anniversary-detail-note > div { font-size: 15px; line-height: 1.75; }
+.anniversary-detail-note .calendar-translation { margin-bottom: 1px; }
+#app-actions .calendar-add { font-size: 27px; line-height: 1; padding: 8px; }
+.calendar-inline-add { border: 0; background: transparent; color: #df5149; padding: 8px 0; font: inherit; font-size: 12px; cursor: pointer; }
+.calendar-anniversaries { margin-top: 22px; padding-top: 20px; border-top: 1px solid #eee; }
+.calendar-anniversaries h3 { margin: 0 0 14px; font-size: 15px; }
+.calendar-anniversaries h3 span { margin-left: 4px; color: #aaa; font-weight: 400; }
+.anniversary-empty { color: #999; font-size: 12px; line-height: 1.6; }
+.anniversary-row { display: flex; align-items: center; gap: 10px; width: 100%; border: 0; border-radius: 12px; background: #fff7f8; padding: 12px; margin-bottom: 8px; color: #28252a; text-align: left; font: inherit; cursor: pointer; }
+.anniversary-stripe { width: 3px; height: 30px; border-radius: 3px; background: #e88a9d; flex-shrink: 0; }
+.anniversary-row-text { flex: 1; min-width: 0; }
+.anniversary-row-text strong { display: block; font-size: 13px; font-weight: 500; overflow-wrap: anywhere; }
+.anniversary-row-text small { display: block; margin-top: 5px; font-size: 10px; color: #969095; }
+.anniversary-countdown { flex-shrink: 0; color: #c65270; font-size: 12px; font-weight: 650; }
+.anniversary-chevron { color: #c6afb7; font-size: 21px; }
+.anniversary-file-tools { margin-top: 25px; padding-top: 18px; border-top: 1px solid #eee; text-align: center; }
+.anniversary-file-tools button { border: 0; background: transparent; color: #9b7985; font: inherit; font-size: 12px; padding: 8px; cursor: pointer; }
+.anniversary-file-tools .anniversary-reset { color: #aaa; font-size: 10px; }
+.anniversary-editor { min-height: 100%; padding: 24px 18px; background: #f8f5f6; }
+.anniversary-eyebrow { margin: 0 0 8px; color: #b67f8e; font-size: 9px; letter-spacing: 2px; }
+.anniversary-editor h2 { margin: 0 0 23px; font-size: 23px; letter-spacing: -1px; }
+.anniversary-fields { padding: 0 15px; background: white; border: 1px solid #eee5e8; border-radius: 16px; }
+.anniversary-fields label { display: block; padding: 15px 0; font-size: 12px; color: #645b60; }
+.anniversary-fields label + label { border-top: 1px solid #f3eff1; }
+.anniversary-edit-field { padding: 15px 0; }
+.anniversary-fields .anniversary-edit-field label { padding: 0; }
+.anniversary-fields > .anniversary-edit-field + label, .anniversary-fields > label + .anniversary-edit-field { border-top: 1px solid #f3eff1; }
+.anniversary-fields input:not([type="checkbox"]), .anniversary-fields textarea { display: block; width: 100%; min-width: 0; margin-top: 8px; border: 0; border-radius: 0; background: transparent; color: #292329; font: inherit; font-size: 16px; line-height: 1.5; box-sizing: border-box; }
+.anniversary-fields input[type="date"] { min-height: 30px; appearance: none; -webkit-appearance: none; }
+.anniversary-fields textarea { resize: vertical; }
+.anniversary-fields input::placeholder, .anniversary-fields textarea::placeholder { color: #bdb6ba; font-size: 13px; }
+.anniversary-fields .anniversary-inline-translation { color: #796f76; font-size: 11px; line-height: 1.5; }
+.anniversary-fields .anniversary-inline-translation::placeholder { color: #9b9199; font-size: 11px; }
+.anniversary-fields .anniversary-repeat { display: flex; align-items: center; justify-content: space-between; min-height: 52px; }
+.anniversary-repeat input { appearance: none; -webkit-appearance: none; position: relative; width: 42px; height: 25px; margin: 0; border-radius: 20px; background: #e3dfe1; cursor: pointer; flex-shrink: 0; }
+.anniversary-repeat input::after { content: ""; position: absolute; top: 2px; left: 2px; width: 21px; height: 21px; border-radius: 50%; background: white; box-shadow: 0 1px 3px rgb(0 0 0 / 15%); transition: transform 150ms; }
+.anniversary-repeat input:checked { background: #61bb8b; }
+.anniversary-repeat input:checked::after { transform: translateX(17px); }
+.anniversary-form-error { color: #c94a54; min-height: 1em; font-size: 12px; }
+.anniversary-form-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.anniversary-form-actions button { padding: 13px; border: 0; border-radius: 12px; background: #ebe5e8; color: #73616a; font: inherit; font-size: 14px; cursor: pointer; }
+.anniversary-form-actions .anniversary-save { background: #d8728d; color: white; }
+.anniversary-delete { display: block; width: 100%; margin-top: 15px; padding: 12px 0; border: 0; border-radius: 12px; background: #f6e7eb; color: #c24e68; font: inherit; font-size: 12px; cursor: pointer; }
+
+/* 矮窗口使用较紧凑的尺寸，保留 Dock 的可见位置。 */
+@media (max-height: 740px) {
+  :root { --widget-size: 128px; --widget-radius: 21px; --app-icon-size: 52px; --app-row-gap: 14px; }
+  .home-screen { padding-top: 12px; }
+  .home-widgets { margin-bottom: 18px; }
+  .ios-widget { padding: 12px; }
+  .widget-city { font-size: 13px; }
+  .widget-temperature { font-size: 36px; }
+  .widget-weather-description, .widget-calendar-summary { font-size: 10px; }
+  .widget-temperature-range { font-size: 9px; }
+  .widget-calendar-date { font-size: 46px; }
+  .calendar-widget.has-translation .widget-calendar-date { font-size: 40px; }
+  .weather-symbol { width: 24px; height: 18px; }
+  .home-spacer { min-height: 8px; }
+  .home-page-indicator { margin-bottom: 8px; }
+  .home-dock { padding-top: 11px; padding-bottom: 11px; }
+}
+@media (max-width: 360px) {
+  :root { --widget-size: 138px; }
+}
+@media (max-width: 480px) {
+  .ios-widget { padding: 12px; }
+  .widget-city { font-size: 13px; }
+  .widget-temperature { font-size: 36px; }
+  .widget-weather-description, .widget-calendar-summary { font-size: 10px; }
+  .widget-temperature-range { font-size: 9px; }
+  .widget-calendar-date { font-size: 46px; }
+  .calendar-widget.has-translation .widget-calendar-date { font-size: 40px; }
+  .weather-symbol { width: 24px; height: 18px; }
+}
+@media (max-width: 360px) {
+  .ios-widget { padding: 10px; }
+  .widget-temperature { font-size: 30px; }
+  .widget-city { font-size: 12px; }
+  .weather-symbol { width: 22px; height: 16px; }
+}
+@media (max-height: 550px) {
+  :root { --widget-size: 110px; --app-icon-size: 44px; --app-row-gap: 12px; }
+  .home-screen { overflow-y: auto; }
+  .ios-widget { padding: 10px; }
+  .widget-temperature { font-size: 29px; }
+  .widget-calendar-date { font-size: 37px; }
+  .calendar-widget.has-translation .widget-calendar-date { font-size: 30px; }
+}

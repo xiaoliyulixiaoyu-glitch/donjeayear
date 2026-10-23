@@ -1,0 +1,93 @@
+{
+  "photos": {
+    "file": "photos-official.png",
+    "url": "https://www.apple.com/v/apps/f/images/overview/apps/tier1/chiclets/photos_chiclet__cs6rufbxntqq_xlarge_2x.png",
+    "source": "https://www.apple.com/kr/apps/"
+  },
+  "camera": {
+    "file": "camera-official.png",
+    "url": "https://www.apple.com/v/apps/f/images/overview/apps/tier1/chiclets/camera_chiclet__durqmihra2s2_xlarge_2x.png",
+    "source": "https://www.apple.com/kr/apps/"
+  },
+  "phone": {
+    "file": "phone-official.png",
+    "url": "https://www.apple.com/v/apps/f/images/overview/apps/tier1/chiclets/phone_chiclet__f1brppw3aqy6_xlarge_2x.png",
+    "source": "https://www.apple.com/kr/apps/"
+  },
+  "contacts": {
+    "file": "contacts-official.png",
+    "url": "https://www.apple.com/v/apps/f/images/overview/apps/tier1/chiclets/contacts_chiclet__bfsq7qs1ptjm_xlarge_2x.png",
+    "source": "https://www.apple.com/kr/apps/"
+  },
+  "notes": {
+    "file": "notes-official.png",
+    "url": "https://www.apple.com/v/apps/f/images/overview/apps/tier1/chiclets/notes_chiclet__clow1nl1x7bm_xlarge_2x.png",
+    "source": "https://www.apple.com/kr/apps/"
+  },
+  "settings": {
+    "file": "settings-official.png",
+    "url": "https://www.apple.com/v/apps/f/images/overview/apps/tier2/settings_chiclet__dr80i4otdb6u_large_2x.png",
+    "source": "https://www.apple.com/kr/apps/"
+  },
+  "kakao": {
+    "file": "kakao-official.jpg",
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/a4/b8/25/a4b825ea-9f4d-c65d-3109-94ba7132ca57/AppIcon-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "source": "https://apps.apple.com/kr/app/id362057947"
+  },
+  "instagram": {
+    "file": "instagram-official.jpg",
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/01/2d/b1/012db1a7-249a-86e8-f025-72491c2a6475/Prod-0-0-1x_U007epad-0-0-0-1-0-0-sRGB-85-220.png/512x512bb.jpg",
+    "source": "https://apps.apple.com/kr/app/id389801252"
+  },
+  "x": {
+    "file": "x-official.jpg",
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/21/99/a9/2199a9db-0dc2-305f-7b8f-a5bc80258dbf/ProductionAppIcon-0-0-1x_U007emarketing-0-8-0-0-0-85-220.png/512x512bb.jpg",
+    "source": "https://apps.apple.com/kr/app/id333903271"
+  },
+  "youtube": {
+    "file": "youtube-official.jpg",
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple221/v4/11/1f/1e/111f1e29-ab13-355b-4ed2-b1b97abc2200/logo_youtube_2024_q4_color-0-0-1x_U007emarketing-0-0-0-7-0-0-0-85-220.png/512x512bb.jpg",
+    "source": "https://apps.apple.com/kr/app/id544007664"
+  },
+  "netflix": {
+    "file": "netflix-official.jpg",
+    "url": "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/86/ad/00/86ad0099-f4d2-2cca-27cf-42df5a25ab13/AppIcon-0-0-1x_U007epad-0-1-0-sRGB-0-85-220.png/512x512bb.jpg",
+    "source": "https://apps.apple.com/kr/app/id363590051"
+  },
+  "spotify": {
+    "file": "spotify-official.png",
+    "url": "https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_Green.png",
+    "source": "https://newsroom.spotify.com/media-kit/logo-and-brand-assets/",
+    "kind": "official-brand-artwork",
+    "note": "Official Spotify symbol displayed on a black icon background."
+  },
+  "baemin": {
+    "file": "baemin-official.png",
+    "url": "https://www.baemin.com/favicon.ico",
+    "source": "https://www.baemin.com/",
+    "kind": "official-website-icon",
+    "note": "Official 100x100 website icon converted from ICO to PNG without redrawing."
+  },
+  "weverse": {
+    "file": "weverse-official.png",
+    "url": "https://phinf.wevpstatic.net/MjAyMjA5MTVfMTU2/MDAxNjYzMjE3NDE2NzU0.Vpt91OU4zSsmabafsMVA4J1hhGGNOUjO7FuzuW4jkR8g.XU6bTSW3wYW1V8Wk4OqmsS1767QnuS8iqZW6Qf3yBvkg.PNG/47702261797433165029ad834-f4ff-4f2c-a522-9654298c6093.png?type=w670",
+    "source": "https://weverse.io/weversezone/artist",
+    "kind": "official-published-artwork",
+    "note": "Icon from official Weverse artwork; CSS zoom removes promotional padding and a monochrome filter displays a white mark on black per the user's request. Original downloaded artwork is retained."
+  },
+  "safari": {
+    "file": "safari-official.png",
+    "url": "https://www.apple.com/v/apps/f/images/overview/apps/tier1/chiclets/safari_chiclet__ervigamv5qye_xlarge_2x.png",
+    "source": "https://www.apple.com/kr/apps/"
+  },
+  "messages": {
+    "file": "messages-official.png",
+    "url": "https://www.apple.com/v/apps/f/images/overview/apps/tier1/chiclets/messages_chiclet__f8bzind6fdqy_xlarge_2x.png",
+    "source": "https://www.apple.com/kr/apps/"
+  },
+  "clock": {
+    "file": "clock.svg",
+    "kind": "local-vector",
+    "note": "本地绘制的 iOS 风格模拟时钟标识，不是下载的 Apple 原图。"
+  }
+}

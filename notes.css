@@ -1,0 +1,42 @@
+/* iOS 备忘录：浅灰分组列表、黄色工具、暖白纸面与紧凑正文。 */
+.app-screen[data-app="notes"] { --app-accent: #c49a18; background: #f5f4f0; }
+.phone-screen[data-app="notes"] .status-bar { background: #f5f4f0; }
+.app-screen[data-app="notes"] .app-toolbar { background: #f5f4f0; }
+.app-screen[data-app="notes"] .app-toolbar h1 { visibility: hidden; }
+.app-screen[data-app="notes"][data-notes-view="list"] .app-content { overflow: hidden; }
+.notes-screen { display: flex; flex-direction: column; height: 100%; min-height: 0; }
+.notes-heading { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; padding: 0 20px 15px; }
+.notes-heading h2 { margin: 0; color: #161616; font-size: 32px; letter-spacing: -1px; font-weight: 750; }
+.notes-heading > span { font-size: 11px; color: #95928b; }
+.notes-search { display: flex; align-items: center; gap: 7px; margin: 0 17px 19px; padding: 9px 11px; border-radius: 10px; color: #8e8b84; background: #e9e8e3; }
+.notes-search svg { width: 16px; height: 16px; }
+.notes-search input { width: 100%; min-width: 0; padding: 0; border: 0; outline: 0; color: #292720; background: transparent; font: inherit; font-size: 14px; }
+.notes-scroll { flex: 1; min-height: 0; overflow: auto; padding: 0 17px 20px; }
+.notes-section-title { margin: 0 4px 9px; font-size: 12px; font-weight: 500; color: #77746d; }
+.app-screen[data-app="notes"] .notes-list { border-radius: 12px; background: #fffefa; }
+.app-screen[data-app="notes"] .note-row { position: relative; padding: 14px 16px; border: 0; background: transparent; }
+.app-screen[data-app="notes"] .note-row + .note-row::before { content: ""; position: absolute; left: 16px; top: 0; right: 0; height: 1px; background: #e8e6df; }
+.app-screen[data-app="notes"] .note-row strong { font-size: 16px; font-weight: 650; }
+.app-screen[data-app="notes"] .note-row .story-translation { color: #99958a; font-size: 9px; }
+.note-row-summary { display: flex; align-items: flex-start; gap: 10px; margin-top: 7px; }
+.note-row-summary > time { flex-shrink: 0; padding-top: 1px; font-size: 10px; color: #8a867c; line-height: 1.6; }
+.note-row-summary > small { flex: 1; min-width: 0; margin: 0; color: #8a867c; font-size: 12px; }
+.notes-bottom-toolbar { position: relative; display: flex; align-items: center; justify-content: center; min-height: 47px; padding: 3px 19px; flex-shrink: 0; background: #f5f4f0; }
+.notes-bottom-toolbar .notes-count { margin: 0; color: #5f5b52; font-size: 11px; }
+.notes-bottom-toolbar > button { position: absolute; right: 16px; display: grid; place-items: center; width: 38px; height: 38px; padding: 7px; border: 0; background: transparent; color: #c49a18; cursor: pointer; }
+.notes-bottom-toolbar svg { width: 24px; height: 24px; }
+.app-screen[data-app="notes"][data-notes-view="detail"],
+.app-screen[data-app="notes"][data-notes-view="detail"] .app-toolbar { background: #fffefa; }
+.phone-screen[data-app="notes"]:has([data-notes-view="detail"]) .status-bar { background: #fffefa; }
+.app-screen[data-app="notes"] .story-note { min-height: 100%; padding: 8px 22px 35px; background-color: #fffefa; background-image: repeating-linear-gradient(0deg, transparent, transparent 3px, rgb(100 80 20 / 0.012) 4px); }
+.app-screen[data-app="notes"] .note-date { margin: 0 0 22px; color: #9b968a; font-size: 10px; }
+.app-screen[data-app="notes"] .story-note-title { margin: 0 0 21px; color: #25221c; font-size: 26px; line-height: 1.35; letter-spacing: -0.5px; }
+.app-screen[data-app="notes"] .story-note-title .story-translation { font-size: 11px; margin-bottom: 4px; letter-spacing: 0; }
+.app-screen[data-app="notes"] .story-paragraph { margin: 0 0 14px; font-size: 16px; line-height: 1.55; color: #302d27; }
+.app-screen[data-app="notes"] .story-paragraph.note-paragraph-break { margin-top: 32px; }
+.app-screen[data-app="notes"] .story-paragraph .story-translation { margin-bottom: 3px; color: #999386; font-size: 10px; line-height: 1.4; }
+.note-checklist-row { display: flex; align-items: flex-start; gap: 9px; }
+.note-check-circle { flex: 0 0 18px; width: 18px; height: 18px; margin-top: 17px; border: 1.5px solid #d1ae49; border-radius: 50%; }
+.note-checklist-row > .story-paragraph { flex: 1; min-width: 0; }
+.app-screen[data-app="notes"] .note-editor { background: #fffefa; padding: 8px 22px 25px; }
+.app-screen[data-app="notes"] .note-row[hidden] { display: none; }

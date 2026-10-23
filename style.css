@@ -1,0 +1,397 @@
+/* 从这里开始调整外观：改冒号后面的值，保存并刷新网页。 */
+:root {
+  --phone-width: 390px;            /* 电脑上手机的宽度 */
+  --phone-height: 780px;           /* 电脑上手机的高度 */
+  --phone-radius: 48px;           /* 手机外框的圆角 */
+  --frame-width: 8px;             /* 黑色边框的厚度 */
+  --frame-color: #222328;         /* 手机外框颜色 */
+  --screen-background: #e6e8f0;    /* 手机里面的纯色背景 */
+  --page-background: #f3f3f5;      /* 手机外面的网页背景 */
+  --text-color: #242731;          /* 时间和状态栏的颜色 */
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 24px;
+  display: grid;
+  place-items: center;
+  background: var(--page-background);
+  color: var(--text-color);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.phone {
+  width: min(var(--phone-width), 100%);
+  height: min(var(--phone-height), calc(100vh - 48px));
+  height: min(var(--phone-height), calc(100svh - 48px));
+  padding: var(--frame-width);
+  border-radius: var(--phone-radius);
+  background: var(--frame-color);
+  box-shadow:
+    0 28px 65px -20px rgb(27 29 39 / 25%),
+    0 0 0 1px rgb(255 255 255 / 35%) inset;
+}
+
+.phone-screen {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: calc(var(--phone-radius) - var(--frame-width));
+  background: var(--screen-background);
+}
+
+.status-bar {
+  position: relative;
+  flex-shrink: 0;
+  height: 58px;
+  padding: 0 21px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.status-time {
+  font-size: 15px;
+  font-weight: 650;
+  font-variant-numeric: tabular-nums;
+}
+
+.camera-island {
+  position: absolute;
+  left: 50%;
+  top: 11px;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 29px;
+  border-radius: 20px;
+  background: #151518;
+}
+
+.status-icons {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.status-icons svg {
+  width: 18px;
+  height: 15px;
+  fill: currentColor;
+}
+
+.status-icons .battery {
+  width: 27px;
+}
+
+.battery-outline {
+  fill: none;
+  stroke: currentColor;
+  opacity: 0.45;
+}
+
+.wifi path {
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 2.4;
+  stroke-linecap: round;
+}
+
+.wallpaper {
+  flex: 1;
+  min-height: 0;
+  padding-top: clamp(16px, 6vh, 58px);
+  text-align: center;
+}
+
+.main-time {
+  display: block;
+  font-size: clamp(56px, 18vw, 84px); /* 调整这里可以改变大时间字号 */
+  line-height: 1.1;
+  font-weight: 600;
+  letter-spacing: -4px;
+  font-variant-numeric: tabular-nums;
+}
+
+.home-indicator {
+  position: absolute;
+  bottom: 9px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 115px;
+  height: 5px;
+  border-radius: 10px;
+  background: currentColor;
+  opacity: 0.8;
+}
+
+/* 小屏幕自动缩小留白，让手机外框适应实际屏幕。 */
+@media (max-width: 480px) {
+  body {
+    padding: 12px;
+  }
+
+  .phone {
+    height: min(var(--phone-height), calc(100vh - 24px));
+    height: min(var(--phone-height), calc(100svh - 24px));
+  }
+}
+/* 韩语系统字体 */
+.phone-screen {
+  font-family:
+    -apple-system, BlinkMacSystemFont,
+    "Apple SD Gothic Neo", "Malgun Gothic", sans-serif;
+}
+
+/* 顶部运营商 */
+.status-carrier {
+  font-size: 13px;
+  font-weight: 600;
+}
+
+/* 大号时间上方的日期 */
+.lock-date {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+/* 调整原有时间的字重 */
+.main-time {
+  font-weight: 400;
+}
+
+/* 底部两侧快捷图标的位置 */
+.lock-shortcuts {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 58px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.shortcut-icon {
+  width: 46px;
+  height: 46px;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  background: rgb(0 0 0 / 12%);
+}
+
+.shortcut-icon svg {
+  width: 23px;
+  height: 23px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+/* 底部韩语提示 */
+.unlock-hint {
+  position: absolute;
+  bottom: 26px;
+  left: 0;
+  right: 0;
+  margin: 0;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+}
+/* 手机壁纸 */
+.phone-screen {
+  background-image:
+    linear-gradient(
+      rgb(0 0 0 / 15%),
+      rgb(0 0 0 / 15%)
+    ),
+    url("assets/wallpaper.JPG");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  /* 时间、状态栏和底部图标改成白色 */
+  color: white;
+}
+
+/* 密码功能：画面的显示与隐藏 */
+[hidden] {
+  display: none !important;
+}
+
+.status-bar,
+.home-indicator {
+  z-index: 3;
+}
+
+.wallpaper {
+  touch-action: none;
+}
+
+.unlock-hint {
+  bottom: 18px;
+  min-height: 44px;
+  padding: 8px 0;
+  border: 0;
+  background: transparent;
+  color: inherit;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.lock-shortcuts {
+  bottom: 72px;
+}
+
+/* 密码界面覆盖在壁纸上。调整这里可以改变模糊和遮罩浓度。 */
+.passcode-view {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 64px 20px 40px;
+  background: rgb(0 0 0 / 42%);
+  -webkit-backdrop-filter: blur(22px);
+  backdrop-filter: blur(22px);
+  color: white;
+}
+
+.passcode-view h1 {
+  margin: 0;
+  font-size: 23px;
+  font-weight: 500;
+}
+
+.passcode-status {
+  min-height: 20px;
+  margin: 10px 0 22px;
+  font-size: 13px;
+  text-align: center;
+}
+
+.passcode-dots {
+  display: flex;
+  gap: 21px;
+  margin-bottom: clamp(20px, 5svh, 44px);
+}
+
+.passcode-dots i {
+  width: 12px;
+  height: 12px;
+  border: 1.5px solid white;
+  border-radius: 50%;
+}
+
+.passcode-dots i.filled {
+  background: white;
+}
+
+.passcode-keypad {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 16px 24px;
+  width: min(100%, 270px);
+}
+
+.passcode-keypad button {
+  aspect-ratio: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  border-radius: 50%;
+  background: rgb(255 255 255 / 16%);
+  color: white;
+  font: inherit;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.passcode-keypad button:active {
+  background: rgb(255 255 255 / 40%);
+}
+
+.passcode-keypad button span {
+  font-size: 32px;
+  line-height: 1.1;
+}
+
+.passcode-keypad button small {
+  margin-top: 3px;
+  font-size: 9px;
+  letter-spacing: 2px;
+}
+
+.passcode-keypad .key-action {
+  background: transparent;
+  font-size: 14px;
+}
+
+.phone-screen button:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 4px;
+}
+
+.passcode-dots.is-error {
+  animation: password-shake 0.35s ease;
+}
+
+@keyframes password-shake {
+  25%, 75% { transform: translateX(-9px); }
+  50% { transform: translateX(9px); }
+}
+
+.home-screen {
+  flex: 1;
+}
+
+.screen-announcement {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip-path: inset(50%);
+}
+
+/* 横屏或较矮的窗口中，让键盘可以滚动，避免按键被裁掉。 */
+@media (max-height: 620px) {
+  .passcode-view {
+    justify-content: flex-start;
+    overflow-y: auto;
+  }
+
+  .passcode-keypad {
+    flex-shrink: 0;
+    width: min(100%, 216px);
+    gap: 10px 20px;
+  }
+
+  .passcode-dots {
+    flex-shrink: 0;
+    margin-bottom: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .passcode-dots.is-error {
+    animation: none;
+  }
+}

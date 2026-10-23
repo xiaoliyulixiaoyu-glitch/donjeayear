@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#e6e8f0" />
+    <title>寻年的手机</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="apps.css?v=20261023-story-alerts" />
+    <link rel="stylesheet" href="kakao.css?v=6-calls" />
+    <link rel="stylesheet" href="widgets.css" />
+    <link rel="stylesheet" href="x.css?v=7-reply-lock" />
+    <link rel="stylesheet" href="ig.css?v=5-compose-dm" />
+    <link rel="stylesheet" href="notes.css?v=2-story-notes" />
+    <link rel="stylesheet" href="media.css?v=1" />
+    <link rel="stylesheet" href="extras.css?v=3-pages" />
+    <script src="content.js?v=20261023-dock-pages" defer></script>
+    <script src="widgets-config.js" defer></script>
+    <script src="anniversaries.js" defer></script>
+    <script src="holidays-kr.js" defer></script>
+    <script src="story.js?v=notes-4" defer></script>
+    <script src="ig-content.js?v=bracelets-mutual-2" defer></script>
+    <script src="ig-chats/asti.js?v=2-reply" defer></script>
+    <script src="x-content.js?v=private-1" defer></script>
+    <script src="media-content.js?v=1" defer></script>
+    <script src="spotify-content.js?v=1" defer></script>
+    <script src="clock-content.js?v=1" defer></script>
+    <!-- 每个聊天独立存放；保持这些脚本位于 apps.js 之前。 -->
+    <script src="chats/tws-dorm.js" defer></script>
+    <script src="chats/shinyu.js?v=20261023-dialogue" defer></script>
+    <script src="chats/youngjae.js?v=reading-milestone-1" defer></script>
+    <script src="chats/hanjin.js?v=20261023-dialogue" defer></script>
+    <script src="chats/jihoon.js?v=20261023-dialogue" defer></script>
+    <script src="chats/kyungmin.js?v=20261023-dialogue" defer></script>
+    <script src="chats/brother.js?v=20261023-dialogue" defer></script>
+    <script src="chats/dad.js?v=20261023-dialogue" defer></script>
+    <script src="chats/mom.js?v=20261023-dialogue" defer></script>
+    <script src="chats/idntt-dohun.js" defer></script>
+    <script src="chats/seeun.js" defer></script>
+    <script src="script.js?v=20261023-home-pages" defer></script>
+    <script src="apps.js?v=20261023-notes-progress" defer></script>
+    <script src="media.js?v=2-icons" defer></script>
+    <script src="spotify.js?v=2-search" defer></script>
+    <script src="clock.js?v=3-timer" defer></script>
+    <script src="system-apps.js?v=1" defer></script>
+    <script src="ig.js?v=6-mutual" defer></script>
+    <script src="ig-interactions.js?v=1" defer></script>
+    <script src="x.js?v=8-reply-lock" defer></script>
+    <script src="widgets.js?v=20261023-bilingual" defer></script>
+  </head>
+  <body>
+    <!-- 手机包含锁屏、密码键盘和主屏幕三个画面。 -->
+    <main class="phone" aria-label="寻年的手机预览">
+      <div class="phone-screen">
+        <header class="status-bar" aria-label="状态栏">
+          <!-- 模拟运营商文字，可以自行修改 -->
+          <span class="status-carrier" id="status-label">SKT</span>
+          <div class="camera-island" aria-hidden="true"></div>
+          <!-- 这些图标是装饰，不表示设备的实际信号或电量。 -->
+          <div class="status-icons" aria-hidden="true">
+            <svg class="signal" viewBox="0 0 20 16">
+              <rect x="1" y="10" width="3" height="5" rx="1" />
+              <rect x="6" y="7" width="3" height="8" rx="1" />
+              <rect x="11" y="4" width="3" height="11" rx="1" />
+              <rect x="16" y="1" width="3" height="14" rx="1" />
+            </svg>
+            <svg class="wifi" viewBox="0 0 24 18">
+              <path d="M3 5a14 14 0 0 1 18 0M6.5 9a9 9 0 0 1 11 0" />
+              <path d="M10 13a3.5 3.5 0 0 1 4 0" />
+              <circle cx="12" cy="16" r="1" />
+            </svg>
+            <svg class="battery" viewBox="0 0 30 16">
+              <rect class="battery-outline" x="1" y="2" width="24" height="12" rx="3" />
+              <rect x="3.5" y="4.5" width="17" height="7" rx="1" />
+              <rect x="27" y="6" width="2" height="4" rx="1" />
+            </svg>
+          </div>
+        </header>
+
+        <section class="wallpaper" id="lock-screen" aria-label="韩语锁屏">
+          <!-- 时间上方的韩语日期 -->
+          <time class="lock-date" id="lock-date"></time>
+
+          <!-- 大号时间 -->
+          <time class="main-time" data-clock aria-label="当前时间">9:41</time>
+
+          <!-- 本轮只展示图标，暂时没有点击功能 -->
+          <div class="lock-shortcuts" aria-hidden="true">
+            <div class="shortcut-icon">
+              <!-- 手电筒 -->
+              <svg viewBox="0 0 24 24">
+                <path d="M8 3h8v5l-2 3v9h-4v-9L8 8Z" />
+                <path d="M8 6h8M11 13h2" />
+              </svg>
+            </div>
+
+            <div class="shortcut-icon">
+              <!-- 相机 -->
+              <svg viewBox="0 0 24 24">
+                <path d="M3 7h4l2-3h6l2 3h4v13H3Z" />
+                <circle cx="12" cy="13" r="4" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- 可以点击，也可以在锁屏上向上滑动。 -->
+          <button class="unlock-hint" id="open-passcode" type="button">
+            위로 쓸어올려서 잠금 해제
+          </button>
+        </section>
+
+        <!-- 密码键盘：hidden 表示最初不显示这个画面。 -->
+        <section class="passcode-view" id="passcode-screen" aria-labelledby="passcode-title" hidden>
+          <h1 id="passcode-title">암호 입력</h1>
+          <p class="passcode-status" id="passcode-status" role="status">4자리 암호를 입력하십시오</p>
+
+          <div class="passcode-dots" id="passcode-dots" role="img" aria-label="已输入 0 位，共 4 位">
+            <i></i><i></i><i></i><i></i>
+          </div>
+
+          <div class="passcode-keypad" aria-label="密码键盘">
+            <button type="button" data-digit="1" aria-label="1"><span>1</span></button>
+            <button type="button" data-digit="2" aria-label="2"><span>2</span><small>ABC</small></button>
+            <button type="button" data-digit="3" aria-label="3"><span>3</span><small>DEF</small></button>
+            <button type="button" data-digit="4" aria-label="4"><span>4</span><small>GHI</small></button>
+            <button type="button" data-digit="5" aria-label="5"><span>5</span><small>JKL</small></button>
+            <button type="button" data-digit="6" aria-label="6"><span>6</span><small>MNO</small></button>
+            <button type="button" data-digit="7" aria-label="7"><span>7</span><small>PQRS</small></button>
+            <button type="button" data-digit="8" aria-label="8"><span>8</span><small>TUV</small></button>
+            <button type="button" data-digit="9" aria-label="9"><span>9</span><small>WXYZ</small></button>
+            <button class="key-action" id="cancel-passcode" type="button">취소</button>
+            <button type="button" data-digit="0" aria-label="0"><span>0</span></button>
+            <button class="key-action" id="delete-digit" type="button">지우기</button>
+          </div>
+        </section>
+
+        <!-- 应用图标及排列从 content.js 读取。 -->
+        <section class="home-screen" id="home-screen" lang="ko" aria-label="主屏幕" tabindex="-1" hidden>
+          <div class="home-page-content" id="home-pages" aria-label="홈 화면 페이지" tabindex="0">
+          <section class="home-launcher-page" aria-label="홈 화면 1페이지">
+          <div class="home-widgets" id="home-widgets" aria-label="위젯"></div>
+          <div class="home-apps" id="home-apps" aria-label="桌面应用"></div>
+          </section>
+          </div>
+          <div class="home-page-indicator" id="home-page-indicator" aria-label="홈 화면 페이지 선택"></div>
+          <nav class="home-dock" id="home-dock" aria-label="常用应用"></nav>
+        </section>
+
+        <section class="app-screen" id="app-screen" lang="ko" aria-labelledby="app-title" hidden>
+          <header class="app-toolbar">
+            <button class="app-back" id="app-back" type="button" aria-label="返回主屏幕">‹ <span>홈</span></button>
+            <h1 id="app-title"></h1>
+            <div id="app-actions"></div>
+          </header>
+          <div class="app-content" id="app-content"></div>
+        </section>
+        <p class="screen-announcement" id="screen-announcement" role="status"></p>
+        <div class="phone-toast" id="phone-toast" role="status" hidden></div>
+
+        <button class="home-indicator" id="home-button" type="button" aria-label="回到主屏幕"></button>
+      </div>
+    </main>
+  </body>
+</html>
